@@ -8,6 +8,11 @@
     "url": "https://github.com/alvasoft-github/ngx-custom-validators.git"
   },
   "main": "public_api.ts",
+  "files": [
+    "src",
+    "dist",
+    "public_api.ts"
+  ],
   "description": "Angular custom directives for validation",
   "keywords": [
     "angular",
