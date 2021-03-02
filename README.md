@@ -1,12 +1,14 @@
 # Description
 
-Angular Custom Validators, forked from [ng2-validation](https://github.com/yuyang041060120/ng2-validation).
+Angular Custom Validators, forked from [ngx-custom-validators](https://github.com/rsaenen/ngx-custom-validators).
+It seems that the package is not maintained anymore; thus this fork will keep up-to-date with the Angular versions.
+
 Directives for form validation (template or model driven).
 
 # Installation
 
 ```bash
-npm i ngx-custom-validators --save
+npm i @alvasoft/ngx-custom-validators --save
 ```
 
 # Validators
