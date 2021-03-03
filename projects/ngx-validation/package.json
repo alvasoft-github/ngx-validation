@@ -1,13 +1,24 @@
 {
-  "name": "@alvasoft/ngx-validation",
-  "author": "Alvasoft e.U.",
-  "license": "MIT",
-  "version": "11.0.0",
-  "peerDependencies": {
-    "@angular/common": "^11.2.3",
-    "@angular/core": "^11.2.3"
-  },
-  "dependencies": {
-    "tslib": "^2.0.0"
-  }
+	"name": "@alvasoft/ngx-validation",
+	"author": "Alvasoft e.U.",
+	"license": "MIT",
+	"version": "11.0.0",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve",
+		"build": "ng build --prod",
+		"test": "ng test --sourceMap=false --browsers=ChromeHeadless --watch=false",
+		"lint": "ng lint",
+		"e2e": "ng e2e",
+		"preversion": "npm run lint && npm run test",
+		"version": "npm run build",
+		"postversion": "git push origin && git push origin --tags"
+	},
+	"peerDependencies": {
+		"@angular/common": "^11.2.3",
+		"@angular/core": "^11.2.3"
+	},
+	"dependencies": {
+		"tslib": "^2.0.0"
+	}
 }
