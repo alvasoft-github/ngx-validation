@@ -2,7 +2,7 @@
 	"name": "@alvasoft/ngx-validation",
 	"author": "Alvasoft e.U.",
 	"license": "MIT",
-	"version": "11.0.0",
+	"version": "11.0.3",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
