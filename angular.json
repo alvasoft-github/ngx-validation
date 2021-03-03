@@ -1,47 +1,48 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "ngx-validation": {
-      "projectType": "library",
-      "root": "projects/ngx-validation",
-      "sourceRoot": "projects/ngx-validation/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/ngx-validation/tsconfig.lib.json",
-            "project": "projects/ngx-validation/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ngx-validation/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-validation/src/test.ts",
-            "tsConfig": "projects/ngx-validation/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-validation/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-validation/tsconfig.lib.json",
-              "projects/ngx-validation/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }},
-  "defaultProject": "ngx-validation"
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"projects": {
+		"ngx-validation": {
+			"projectType": "library",
+			"root": "projects/ngx-validation",
+			"sourceRoot": "projects/ngx-validation/src",
+			"prefix": "ngv",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:ng-packagr",
+					"options": {
+						"tsConfig": "projects/ngx-validation/tsconfig.lib.json",
+						"project": "projects/ngx-validation/ng-package.json"
+					},
+					"configurations": {
+						"production": {
+							"tsConfig": "projects/ngx-validation/tsconfig.lib.prod.json"
+						}
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"main": "projects/ngx-validation/src/test.ts",
+						"tsConfig": "projects/ngx-validation/tsconfig.spec.json",
+						"karmaConfig": "projects/ngx-validation/karma.conf.js"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/ngx-validation/tsconfig.lib.json",
+							"projects/ngx-validation/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**"
+						]
+					}
+				}
+			}
+		}
+	},
+	"defaultProject": "ngx-validation"
 }

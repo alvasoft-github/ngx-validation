@@ -1,6 +1,8 @@
 {
-  "name": "ngx-validation",
-  "version": "0.0.1",
+  "name": "@alvasoft/ngx-validation",
+  "author": "Alvasoft e.U.",
+  "license": "MIT",
+  "version": "11.0.0",
   "peerDependencies": {
     "@angular/common": "^11.2.3",
     "@angular/core": "^11.2.3"
