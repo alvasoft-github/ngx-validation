@@ -1,7 +1,7 @@
 {
   "name": "@alvasoft/ngx-custom-validators",
   "author": "Alvasoft",
-  "version": "11.2.5",
+  "version": "13.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
   "description": "Angular custom directives for validation",
   "keywords": [
     "angular",
-    "angular 11",
     "directive",
     "reactive",
     "template",
