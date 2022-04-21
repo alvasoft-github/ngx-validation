@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alvasoft-github/ngx-custom-validators.git"
+    "url": "https://github.com/alvasoft-github/ngx-validation.git"
   },
   "main": "public_api.ts",
   "files": [
