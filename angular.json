@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-custom-validators",
+            "outputPath": "dist/ngx-validators",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-custom-validators:build"
+            "browserTarget": "ngx-validators:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-custom-validators:build:production"
+              "browserTarget": "ngx-validators:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-custom-validators:build"
+            "browserTarget": "ngx-validators:build"
           }
         },
         "test": {
@@ -109,18 +109,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-custom-validators:serve"
+            "devServerTarget": "ngx-validators:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-custom-validators:serve:production"
+              "devServerTarget": "ngx-validators:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-custom-validators",
+  "defaultProject": "ngx-validators",
   "cli": {
     "analytics": false
   }
