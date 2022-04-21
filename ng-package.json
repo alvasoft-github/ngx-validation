@@ -1,0 +1,11 @@
+{
+    "lib": {
+        "entryFile": "public_api.ts"
+    },
+    "allowedNonPeerDependencies": [
+        "@angular/*",
+        "moment",
+        "rxjs",
+        "zone.js"
+    ]
+}

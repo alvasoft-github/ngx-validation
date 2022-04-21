@@ -4,41 +4,43 @@ import { NG_VALIDATORS, Validator, ValidatorFn, AbstractControl } from '@angular
 import { arrayLength } from './validator';
 
 const ARRAY_LENGTH_VALIDATOR: any = {
-  provide: NG_VALIDATORS,
-  useExisting: forwardRef(() => ArrayLengthValidator),
-  multi: true
+    provide: NG_VALIDATORS,
+    useExisting: forwardRef(() => ArrayLengthValidator),
+    multi: true
 };
 
 @Directive({
-  selector: '[arrayLength][formControlName],[arrayLength][formControl],[arrayLength][ngModel]',
-  providers: [ARRAY_LENGTH_VALIDATOR]
+    selector: '[arrayLength][formControlName],[arrayLength][formControl],[arrayLength][ngModel]',
+    providers: [ARRAY_LENGTH_VALIDATOR]
 })
 export class ArrayLengthValidator implements Validator, OnInit, OnChanges {
-  @Input() arrayLength: number;
 
-  private validator: ValidatorFn;
-  private onChange: () => void;
+    @Input()
+    arrayLength: number;
 
-  ngOnInit() {
-    this.validator = arrayLength(this.arrayLength);
-  }
+    private validator: ValidatorFn;
+    private onChange: () => void;
 
-  ngOnChanges(changes: SimpleChanges) {
-    for (const key in changes) {
-      if (key === 'arrayLength') {
-        this.validator = arrayLength(changes[key].currentValue);
-        if (this.onChange) {
-          this.onChange();
-        }
-      }
+    ngOnInit() {
+        this.validator = arrayLength(this.arrayLength);
     }
-  }
 
-  validate(c: AbstractControl): {[key: string]: any} {
-    return this.validator(c);
-  }
+    ngOnChanges(changes: SimpleChanges) {
+        for (const key in changes) {
+            if (key === 'arrayLength') {
+                this.validator = arrayLength(changes[key].currentValue);
+                if (this.onChange) {
+                    this.onChange();
+                }
+            }
+        }
+    }
 
-  registerOnValidatorChange(fn: () => void): void {
-    this.onChange = fn;
-  }
+    validate(c: AbstractControl): { [key: string]: any } {
+        return this.validator(c);
+    }
+
+    registerOnValidatorChange(fn: () => void): void {
+        this.onChange = fn;
+    }
 }

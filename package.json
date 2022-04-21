@@ -1,89 +1,81 @@
 {
-  "name": "@alvasoft/ngx-validation",
-  "author": "Alvasoft",
-  "version": "13.0.2",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alvasoft-github/ngx-validation.git"
-  },
-  "main": "public_api.ts",
-  "files": [
-    "src",
-    "dist",
-    "public_api.ts"
-  ],
-  "description": "Angular custom directives for validation",
-  "keywords": [
-    "angular",
-    "directive",
-    "reactive",
-    "template",
-    "forms",
-    "validate",
-    "validation",
-    "validators",
-    "custom"
-  ],
-  "ngPackage": {
-    "lib": {
-      "entryFile": "public_api.ts"
+    "name": "@alvasoft/ngx-validation",
+    "author": "Alvasoft",
+    "version": "13.1.0",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alvasoft-github/ngx-validation.git"
     },
-    "whitelistedNonPeerDependencies": [
-      "@angular/*",
-      "bootstrap",
-      "moment",
-      "rxjs",
-      "tslib",
-      "zone.js"
-    ]
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "private": false,
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng-packagr -p package.json",
-    "lint": "ng lint",
-    "publish": "npm publish ./dist",
-    "version": "npm run build",
-    "postversion": "git push origin && git push origin --tags"
-  },
-  "dependencies": {
-    "@angular/common": "^13.3.4",
-    "@angular/compiler": "^13.3.4",
-    "@angular/core": "^13.3.4",
-    "@angular/forms": "^13.3.4",
-    "@angular/platform-browser": "^13.3.4",
-    "@angular/platform-browser-dynamic": "^13.3.4",
-    "moment": "^2.28.0",
-    "rxjs": "^6.6.6",
-    "tslib": "^2.3.1",
-    "zone.js": "^0.11.5"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^13.3.3",
-    "@angular-devkit/schematics": "^13.3.3",
-    "@angular/cli": "^13.3.3",
-    "@angular/compiler-cli": "^13.3.4",
-    "@angular/language-service": "^13.3.4",
-    "@types/jasmine": "~3.6.0",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^14.11.1",
-    "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.3.19",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "ng-packagr": "^13.3.1",
-    "protractor": "~7.0.0",
-    "ts-node": "~9.0.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.6.3"
-  }
+    "main": "public_api.ts",
+    "files": [
+        "src",
+        "dist",
+        "public_api.ts"
+    ],
+    "description": "Angular custom directives for validation",
+    "keywords": [
+        "angular",
+        "directive",
+        "reactive",
+        "template",
+        "forms",
+        "validate",
+        "validation",
+        "validators",
+        "custom"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "private": false,
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng-packagr",
+        "lint": "ng lint",
+        "publish": "npm publish ./dist",
+        "version": "npm run build",
+        "postversion": "git push origin && git push origin --tags"
+    },
+    "peerDependencies": {
+        "@angular/common": ">= 11.0.0",
+        "@angular/core": ">= 11.0.0",
+        "@angular/forms": ">= 11.0.0"
+    },
+    "dependencies": {
+        "@angular/common": "^13.3.4",
+        "@angular/compiler": "^13.3.4",
+        "@angular/core": "^13.3.4",
+        "@angular/forms": "^13.3.4",
+        "@angular/platform-browser": "^13.3.4",
+        "@angular/platform-browser-dynamic": "^13.3.4",
+        "moment": "^2.28.0",
+        "rxjs": "^6.6.6",
+        "tslib": "^2.3.1",
+        "zone.js": "^0.11.5"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^13.3.3",
+        "@angular-devkit/schematics": "^13.3.3",
+        "@angular/cli": "^13.3.3",
+        "@angular/compiler-cli": "^13.3.4",
+        "@angular/language-service": "^13.3.4",
+        "@types/jasmine": "~3.6.0",
+        "@types/jasminewd2": "~2.0.3",
+        "@types/node": "^14.11.1",
+        "codelyzer": "^6.0.0",
+        "jasmine-core": "~3.6.0",
+        "jasmine-spec-reporter": "~5.0.0",
+        "karma": "~6.3.19",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage-istanbul-reporter": "~3.0.2",
+        "karma-jasmine": "~4.0.0",
+        "karma-jasmine-html-reporter": "^1.5.0",
+        "ng-packagr": "^13.3.1",
+        "protractor": "~7.0.0",
+        "ts-node": "~9.0.0",
+        "tslint": "~6.1.0",
+        "typescript": "~4.6.3"
+    }
 }
