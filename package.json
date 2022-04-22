@@ -3,10 +3,13 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build",
+        "start": "ng serve ngx-validation",
+        "build": "ng build ngx-validation",
         "watch": "ng build --watch --configuration development",
-        "test": "ng test"
+        "test": "ng test ngx-validation",
+        "preversion": "npm run test",
+        "version": "npm run build",
+        "postversion": "git push origin && git push origin --tags"
     },
     "private": true,
     "dependencies": {
