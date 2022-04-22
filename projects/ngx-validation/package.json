@@ -1,6 +1,6 @@
 {
     "name": "@alvasoft/ngx-validation",
-    "version": "13.3.1",
+    "version": "13.3.3",
     "author": "Alvasoft",
     "license": "MIT",
     "repository": {
@@ -27,7 +27,7 @@
         "test": "ng test ngx-validation --watch=false",
         "preversion": "npm run test",
         "version": "npm run build",
-        "postversion": "git push origin && git push origin --tags"
+        "postversion": "git commit -am \"New version\" && git push origin --tags"
     },
     "peerDependencies": {
         "@angular/common": "^13.0.0",
