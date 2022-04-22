@@ -1,6 +1,6 @@
 {
     "name": "@alvasoft/ngx-validation",
-    "version": "13.3.0",
+    "version": "13.3.1",
     "author": "Alvasoft",
     "license": "MIT",
     "repository": {
@@ -36,7 +36,6 @@
         "moment": ">=2.28.0"
     },
     "dependencies": {
-        "tslib": "^2.3.0",
-        "@angular/platform-browser-dynamic": "^13.0.0"
+        "tslib": "^2.3.0"
     }
 }
