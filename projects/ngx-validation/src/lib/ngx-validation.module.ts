@@ -1,5 +1,33 @@
 import { NgModule } from '@angular/core';
-import { ArrayLengthValidatorDirective, Base64ValidatorDirective, CreditCardValidatorDirective, DateValidatorDirective, DateISOValidatorDirective, DigitsValidatorDirective, EqualValidatorDirective, EqualToValidatorDirective, GreaterThanValidatorDirective, GreaterThanEqualValidatorDirective, IncludedInValidatorDirective, JSONValidatorDirective, LessThanValidatorDirective, LessThanEqualValidatorDirective, MaxDateValidatorDirective, MinDateValidatorDirective, NotEqualValidatorDirective, NotEqualToValidatorDirective, NotIncludedInValidatorDirective, NotMatchingValidatorDirective, NumberValidatorDirective, PropertyValidatorDirective, RangeValidatorDirective, RangeLengthValidatorDirective, UrlValidatorDirective, UUIDValidatorDirective, MaxValidatorDirective, MinValidatorDirective, EmailValidatorDirective } from '../public-api';
+import { ArrayLengthValidatorDirective } from './array-length/directive';
+import { Base64ValidatorDirective } from './base64/directive';
+import { CreditCardValidatorDirective } from './credit-card/directive';
+import { DateISOValidatorDirective } from './date-iso/directive';
+import { DateValidatorDirective } from './date/directive';
+import { DigitsValidatorDirective } from './digits/directive';
+import { EmailValidatorDirective } from './email/directive';
+import { EqualToValidatorDirective } from './equal-to/directive';
+import { EqualValidatorDirective } from './equal/directive';
+import { GreaterThanEqualValidatorDirective } from './greater-than-equal/directive';
+import { GreaterThanValidatorDirective } from './greater-than/directive';
+import { IncludedInValidatorDirective } from './included-in/directive';
+import { JSONValidatorDirective } from './json/directive';
+import { LessThanEqualValidatorDirective } from './less-than-equal/directive';
+import { LessThanValidatorDirective } from './less-than/directive';
+import { MaxDateValidatorDirective } from './max-date/directive';
+import { MaxValidatorDirective } from './max/directive';
+import { MinDateValidatorDirective } from './min-date/directive';
+import { MinValidatorDirective } from './min/directive';
+import { NotEqualToValidatorDirective } from './not-equal-to/directive';
+import { NotEqualValidatorDirective } from './not-equal/directive';
+import { NotIncludedInValidatorDirective } from './not-included-in/directive';
+import { NotMatchingValidatorDirective } from './not-matching/directive';
+import { NumberValidatorDirective } from './number/directive';
+import { PropertyValidatorDirective } from './property/directive';
+import { RangeLengthValidatorDirective } from './range-length/directive';
+import { RangeValidatorDirective } from './range/directive';
+import { UrlValidatorDirective } from './url/directive';
+import { UUIDValidatorDirective } from './uuid/directive';
 
 const EXPORTED_COMPONENTS = [
     ArrayLengthValidatorDirective,
