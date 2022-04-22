@@ -2,8 +2,6 @@
  * Public API Surface of ngx-validation
  */
 
-export * from './lib/ngx-validation.module';
-
 export * from './lib/array-length/validator';
 export * from './lib/array-length/directive';
 
@@ -90,3 +88,5 @@ export * from './lib/url/directive';
 
 export * from './lib/uuid/validator';
 export * from './lib/uuid/directive';
+
+export * from './lib/ngx-validation.module';
