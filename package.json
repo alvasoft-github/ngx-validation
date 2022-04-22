@@ -34,7 +34,6 @@
         "start": "ng serve",
         "build": "ng-packagr",
         "lint": "ng lint",
-        "publish": "npm publish ./dist",
         "version": "npm run build",
         "postversion": "git push origin && git push origin --tags"
     },
