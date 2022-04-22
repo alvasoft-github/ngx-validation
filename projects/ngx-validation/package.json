@@ -1,6 +1,24 @@
 {
     "name": "@alvasoft/ngx-validation",
     "version": "13.3.0",
+    "author": "Alvasoft",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alvasoft-github/ngx-validation.git"
+    },
+    "description": "Angular custom directives for validation",
+    "keywords": [
+        "angular",
+        "directive",
+        "reactive",
+        "template",
+        "forms",
+        "validate",
+        "validation",
+        "validators",
+        "custom"
+    ],
     "peerDependencies": {
         "@angular/common": "^13.0.0",
         "@angular/core": "^13.0.0",
