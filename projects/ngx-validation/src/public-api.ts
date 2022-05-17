@@ -17,6 +17,9 @@ export * from './lib/date-iso/directive';
 export * from './lib/date/validator';
 export * from './lib/date/directive';
 
+export * from './lib/dependent-on/validator';
+export * from './lib/dependent-on/directive';
+
 export * from './lib/digits/validator';
 export * from './lib/digits/directive';
 
@@ -82,6 +85,9 @@ export * from './lib/range/directive';
 
 export * from './lib/range-length/validator';
 export * from './lib/range-length/directive';
+
+export * from './lib/required-if/validator';
+export * from './lib/required-if/directive';
 
 export * from './lib/url/validator';
 export * from './lib/url/directive';
