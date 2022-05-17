@@ -14,6 +14,7 @@ const MAX_VALIDATOR: any = {
     providers: [MAX_VALIDATOR]
 })
 export class MaxValidatorDirective implements Validator, OnInit, OnChanges {
+
     @Input()
     public max: number;
 
