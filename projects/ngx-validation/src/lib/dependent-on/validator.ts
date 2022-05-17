@@ -21,9 +21,14 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
             .forEach(entry => {
                 const ctrl = entry[1];
                 const dependency = findDependency(ctrl);
-                const isValid = dependency?.predicateFn(control);
 
-                isValid && dependency.childControl.setErrors({
+                if (!dependency) {
+                    return;
+                }
+
+                const isValid = dependency.predicateFn(control);
+
+                !isValid && dependency.childControl.setErrors({
                     ...dependency.childControl.errors,
                     [dependency.errorKey ?? 'dependentOn']: true
                 })
