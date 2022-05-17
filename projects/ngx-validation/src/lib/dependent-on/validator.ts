@@ -33,7 +33,7 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
 
                 if (isValid && errors) {
                     delete errors[dependency.errorKey ?? errorKey];
-                } else (!isValid) {
+                } else if (!isValid) {
                     dependency.childControl.setErrors({
                         ...dependency.childControl.errors,
                         [dependency.errorKey ?? errorKey]: true
