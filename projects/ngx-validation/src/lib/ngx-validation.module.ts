@@ -4,6 +4,7 @@ import { Base64ValidatorDirective } from './base64/directive';
 import { CreditCardValidatorDirective } from './credit-card/directive';
 import { DateISOValidatorDirective } from './date-iso/directive';
 import { DateValidatorDirective } from './date/directive';
+import { DependentOnValidatorDirective } from './dependent-on/directive';
 import { DigitsValidatorDirective } from './digits/directive';
 import { EmailValidatorDirective } from './email/directive';
 import { EqualToValidatorDirective } from './equal-to/directive';
@@ -26,6 +27,7 @@ import { NumberValidatorDirective } from './number/directive';
 import { PropertyValidatorDirective } from './property/directive';
 import { RangeLengthValidatorDirective } from './range-length/directive';
 import { RangeValidatorDirective } from './range/directive';
+import { RequiredIfValidatorDirective } from './required-if/directive';
 import { UrlValidatorDirective } from './url/directive';
 import { UUIDValidatorDirective } from './uuid/directive';
 
@@ -35,6 +37,7 @@ const EXPORTED_COMPONENTS = [
     CreditCardValidatorDirective,
     DateValidatorDirective,
     DateISOValidatorDirective,
+    DependentOnValidatorDirective,
     DigitsValidatorDirective,
     EmailValidatorDirective,
     EqualValidatorDirective,
@@ -57,6 +60,7 @@ const EXPORTED_COMPONENTS = [
     PropertyValidatorDirective,
     RangeValidatorDirective,
     RangeLengthValidatorDirective,
+    RequiredIfValidatorDirective,
     UrlValidatorDirective,
     UUIDValidatorDirective
 ];
