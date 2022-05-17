@@ -9,6 +9,8 @@ export interface IControlValueDependency {
     predicateFn: (formGroup: FormGroup) => boolean;
 }
 
+const errorKey = 'dependentOn';
+
 export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
     return (control: AbstractControl): ValidationErrors => {
         if (!(control instanceof FormGroup)) {
@@ -27,11 +29,16 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
                 }
 
                 const isValid = dependency.predicateFn(control);
+                const errors = dependency.childControl.errors;
 
-                !isValid && dependency.childControl.setErrors({
-                    ...dependency.childControl.errors,
-                    [dependency.errorKey ?? 'dependentOn']: true
-                })
+                if (isValid && errors) {
+                    delete errors[dependency.errorKey ?? errorKey];
+                } else (!isValid) {
+                    dependency.childControl.setErrors({
+                        ...dependency.childControl.errors,
+                        [dependency.errorKey ?? errorKey]: true
+                    })
+                }
             });
 
         return null;
