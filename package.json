@@ -2,14 +2,7 @@
     "name": "@alvasoft/ngx-validation",
     "version": "0.1.0",
     "scripts": {
-        "ng": "ng",
-        "start": "ng serve ngx-validation",
-        "build": "ng build ngx-validation",
-        "watch": "ng build --watch --configuration development",
-        "test": "ng test ngx-validation --watch=false",
-        "preversion": "npm run test",
-        "version": "npm run build",
-        "postversion": "git push origin && git push origin --tags"
+        "publish": "npm publish dist/ngx-validation"
     },
     "private": true,
     "dependencies": {
