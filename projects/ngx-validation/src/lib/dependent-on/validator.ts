@@ -17,31 +17,21 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
             return null;
         }
 
-        const findDependency = (c: AbstractControl) => value.find(v => v.childControl === c);
+        value.forEach(v => {
+            const isValid = v.predicateFn(control);
+            const errors = v.childControl?.errors;
 
-        Object.entries(control.controls)
-            .forEach(entry => {
-                const ctrl = entry[1];
-                const dependency = findDependency(ctrl);
-
-                if (!dependency) {
-                    return;
-                }
-
-                const isValid = dependency.predicateFn(control);
-                const errors = dependency.childControl.errors;
-
-                if (isValid && errors) {
-                    delete errors[dependency.errorKey ?? errorKey];
-                    const errorsCount = Object.keys(errors).length;
-                    dependency.childControl.setErrors(errorsCount > 0 ? {...errors} : null);
-                } else if (!isValid) {
-                    dependency.childControl.setErrors({
-                        ...dependency.childControl.errors,
-                        [dependency.errorKey ?? errorKey]: true
-                    })
-                }
-            });
+            if (isValid && errors) {
+                delete errors[v.errorKey ?? errorKey];
+                const errorsCount = Object.keys(errors).length;
+                v.childControl?.setErrors(errorsCount > 0 ? { ...errors } : null);
+            } else if (!isValid) {
+                v.childControl?.setErrors({
+                    ...v.childControl?.errors,
+                    [v.errorKey ?? errorKey]: true
+                });
+            }
+        });
 
         return null;
     };
