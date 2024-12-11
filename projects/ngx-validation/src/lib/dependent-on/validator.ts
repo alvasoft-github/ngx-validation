@@ -1,10 +1,12 @@
-import { AbstractControl, FormGroup, ValidationErrors, ValidatorFn } from "@angular/forms";
+import { AbstractControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export interface IControlValueDependency {
 
     childControl: AbstractControl;
 
     errorKey?: string;
+
+    errorKeyParams?: object;
 
     predicateFn: (formGroup: FormGroup) => boolean;
 }
@@ -28,7 +30,7 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
             } else if (!isValid) {
                 v.childControl?.setErrors({
                     ...v.childControl?.errors,
-                    [v.errorKey ?? errorKey]: true
+                    [v.errorKey ?? errorKey]: v.errorKeyParams ?? true
                 });
             }
         });
