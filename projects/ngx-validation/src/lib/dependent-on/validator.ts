@@ -1,6 +1,15 @@
 import { AbstractControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
 
-export interface IControlValueDependency {
+export const DEPENDENT_ON_TRANSLATED_PARAMS_KEY = '__DEPENDENT_ON_TRANSLATED_PARAMS';
+
+export interface ITranslatedErrorParams {
+
+    translationKey: string;
+
+    translationParams: object;
+}
+
+export interface IDependentOnValidationOptions {
 
     childControl: AbstractControl;
 
@@ -8,12 +17,14 @@ export interface IControlValueDependency {
 
     errorKeyParamsFn?: (formGroup: FormGroup) => object;
 
+    translatedErrorKeyParamsFn?: (FormGroup: FormGroup) => { [id: string]: ITranslatedErrorParams };
+
     predicateFn: (formGroup: FormGroup) => boolean;
 }
 
 const errorKey = 'dependentOn';
 
-export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
+export const dependentOn = (value: IDependentOnValidationOptions[]): ValidatorFn => {
     return (control: AbstractControl): ValidationErrors => {
         if (!(control instanceof FormGroup)) {
             return null;
@@ -28,9 +39,16 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
                 const errorsCount = Object.keys(errors).length;
                 v.childControl?.setErrors(errorsCount > 0 ? { ...errors } : null);
             } else if (!isValid) {
+                const errorValue = (v.errorKeyParamsFn || v.translatedErrorKeyParamsFn)
+                    ? {
+                        ...v.errorKeyParamsFn?.(control),
+                        [DEPENDENT_ON_TRANSLATED_PARAMS_KEY]: v.translatedErrorKeyParamsFn(control)
+                    }
+                    : null;
+
                 v.childControl?.setErrors({
                     ...v.childControl?.errors,
-                    [v.errorKey ?? errorKey]: v.errorKeyParamsFn?.(control) ?? true
+                    [v.errorKey ?? errorKey]: errorValue ?? true
                 });
             }
         });

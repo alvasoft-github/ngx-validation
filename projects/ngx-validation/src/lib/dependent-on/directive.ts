@@ -1,7 +1,7 @@
 import { Directive, forwardRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, Validator, ValidatorFn } from '@angular/forms';
 
-import { IControlValueDependency, dependentOn } from './validator';
+import { dependentOn, IDependentOnValidationOptions } from './validator';
 
 const REQUIRED_IF_VALIDATOR: any = {
     provide: NG_VALIDATORS,
@@ -16,7 +16,7 @@ const REQUIRED_IF_VALIDATOR: any = {
 export class DependentOnValidatorDirective implements Validator, OnInit, OnChanges {
 
     @Input()
-    public dependencies: IControlValueDependency[];
+    public dependencies: IDependentOnValidationOptions[];
 
     private validator: ValidatorFn;
     private onChange: () => void;
