@@ -6,7 +6,7 @@ export interface IControlValueDependency {
 
     errorKey?: string;
 
-    errorKeyParams?: object;
+    errorKeyParamsFn?: (formGroup: FormGroup) => object;
 
     predicateFn: (formGroup: FormGroup) => boolean;
 }
@@ -30,7 +30,7 @@ export const dependentOn = (value: IControlValueDependency[]): ValidatorFn => {
             } else if (!isValid) {
                 v.childControl?.setErrors({
                     ...v.childControl?.errors,
-                    [v.errorKey ?? errorKey]: v.errorKeyParams ?? true
+                    [v.errorKey ?? errorKey]: v.errorKeyParamsFn?.(control) ?? true
                 });
             }
         });
