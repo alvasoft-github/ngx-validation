@@ -6,7 +6,7 @@ export interface ITranslatedErrorParams {
 
     translationKey: string;
 
-    translationParams: object;
+    translationParams?: object;
 }
 
 export interface IDependentOnValidationOptions {
