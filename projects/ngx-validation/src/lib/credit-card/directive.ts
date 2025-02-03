@@ -11,7 +11,8 @@ const CREDIT_CARD_VALIDATOR: any = {
 
 @Directive({
     selector: '[creditCard][formControlName],[creditCard][formControl],[creditCard][ngModel]',
-    providers: [CREDIT_CARD_VALIDATOR]
+    providers: [CREDIT_CARD_VALIDATOR],
+    standalone: false
 })
 export class CreditCardValidatorDirective implements Validator {
 

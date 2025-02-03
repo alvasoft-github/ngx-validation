@@ -11,7 +11,8 @@ const DIGITS_VALIDATOR: any = {
 
 @Directive({
     selector: '[digits][formControlName],[digits][formControl],[digits][ngModel]',
-    providers: [DIGITS_VALIDATOR]
+    providers: [DIGITS_VALIDATOR],
+    standalone: false
 })
 export class DigitsValidatorDirective implements Validator {
 

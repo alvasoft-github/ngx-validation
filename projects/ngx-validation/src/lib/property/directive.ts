@@ -11,7 +11,8 @@ const PROPERTY_VALIDATOR: any = {
 
 @Directive({
     selector: '[property][formControlName],[property][formControl],[property][ngModel]',
-    providers: [PROPERTY_VALIDATOR]
+    providers: [PROPERTY_VALIDATOR],
+    standalone: false
 })
 export class PropertyValidatorDirective implements Validator, OnInit, OnChanges {
 

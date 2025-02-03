@@ -11,7 +11,8 @@ const JSON_VALIDATOR: any = {
 
 @Directive({
     selector: '[json][formControlName],[json][formControl],[json][ngModel]',
-    providers: [JSON_VALIDATOR]
+    providers: [JSON_VALIDATOR],
+    standalone: false
 })
 export class JSONValidatorDirective implements Validator {
 

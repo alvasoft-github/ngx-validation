@@ -11,7 +11,8 @@ const REQUIRED_IF_VALIDATOR: any = {
 
 @Directive({
     selector: '[dependentOn][formControlName],[dependentOn][formControl],[dependentOn][ngModel]',
-    providers: [REQUIRED_IF_VALIDATOR]
+    providers: [REQUIRED_IF_VALIDATOR],
+    standalone: false
 })
 export class DependentOnValidatorDirective implements Validator, OnInit, OnChanges {
 

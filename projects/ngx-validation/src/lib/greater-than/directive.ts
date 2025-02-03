@@ -11,7 +11,8 @@ const GREATER_THAN_VALIDATOR: any = {
 
 @Directive({
     selector: '[gt][formControlName],[gt][formControl],[gt][ngModel]',
-    providers: [GREATER_THAN_VALIDATOR]
+    providers: [GREATER_THAN_VALIDATOR],
+    standalone: false
 })
 export class GreaterThanValidatorDirective implements Validator, OnInit, OnChanges {
 

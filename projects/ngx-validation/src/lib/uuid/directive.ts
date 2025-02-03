@@ -11,7 +11,8 @@ const UUID_VALIDATOR: any = {
 
 @Directive({
     selector: '[uuid][formControlName],[uuid][formControl],[uuid][ngModel]',
-    providers: [UUID_VALIDATOR]
+    providers: [UUID_VALIDATOR],
+    standalone: false
 })
 export class UUIDValidatorDirective implements Validator, OnInit, OnChanges {
 

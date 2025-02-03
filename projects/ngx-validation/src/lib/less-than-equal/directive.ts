@@ -11,7 +11,8 @@ const LESS_THAN_EQUAL_VALIDATOR: any = {
 
 @Directive({
     selector: '[lte][formControlName],[lte][formControl],[lte][ngModel]',
-    providers: [LESS_THAN_EQUAL_VALIDATOR]
+    providers: [LESS_THAN_EQUAL_VALIDATOR],
+    standalone: false
 })
 export class LessThanEqualValidatorDirective implements Validator, OnInit, OnChanges {
 

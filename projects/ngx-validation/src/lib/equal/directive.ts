@@ -11,7 +11,8 @@ const EQUAL_VALIDATOR: any = {
 
 @Directive({
     selector: '[equal][formControlName],[equal][formControl],[equal][ngModel]',
-    providers: [EQUAL_VALIDATOR]
+    providers: [EQUAL_VALIDATOR],
+    standalone: false
 })
 export class EqualValidatorDirective implements Validator, OnInit, OnChanges {
 

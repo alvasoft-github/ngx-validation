@@ -11,7 +11,8 @@ const ARRAY_LENGTH_VALIDATOR: any = {
 
 @Directive({
     selector: '[arrayLength][formControlName],[arrayLength][formControl],[arrayLength][ngModel]',
-    providers: [ARRAY_LENGTH_VALIDATOR]
+    providers: [ARRAY_LENGTH_VALIDATOR],
+    standalone: false
 })
 export class ArrayLengthValidatorDirective implements Validator, OnInit, OnChanges {
 

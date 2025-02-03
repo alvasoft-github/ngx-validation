@@ -11,7 +11,8 @@ const MIN_VALIDATOR: any = {
 
 @Directive({
     selector: '[min][formControlName],[min][formControl],[min][ngModel]',
-    providers: [MIN_VALIDATOR]
+    providers: [MIN_VALIDATOR],
+    standalone: false
 })
 export class MinValidatorDirective implements Validator, OnInit, OnChanges {
 

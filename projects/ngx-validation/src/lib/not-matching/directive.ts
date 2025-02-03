@@ -11,7 +11,8 @@ const NOT_MATCHING_VALIDATOR: any = {
 
 @Directive({
     selector: '[notMatching][formControlName],[notMatching][formControl],[notMatching][ngModel]',
-    providers: [NOT_MATCHING_VALIDATOR]
+    providers: [NOT_MATCHING_VALIDATOR],
+    standalone: false
 })
 export class NotMatchingValidatorDirective implements Validator, OnInit, OnChanges {
 

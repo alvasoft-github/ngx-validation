@@ -23,6 +23,7 @@
         "ng": "ng",
         "start": "ng serve ngx-validation",
         "build": "ng build ngx-validation",
+        "build:prod": "ng build --configuration production",
         "watch": "ng build --watch --configuration development",
         "test": "ng test ngx-validation --watch=false",
         "preversion": "npm run test",
@@ -30,12 +31,12 @@
         "postversion": "git commit -am \"New version\" && git push origin --tags"
     },
     "peerDependencies": {
-        "@angular/common": "^18.0.0",
-        "@angular/core": "^18.0.0",
-        "@angular/forms": "^18.0.0",
+        "@angular/common": ">=19.0.0",
+        "@angular/core": ">=19.0.0",
+        "@angular/forms": "=>19.0.0",
         "moment": ">=2.28.0"
     },
     "dependencies": {
-        "tslib": "^2.3.0"
+        "tslib": "^2.8.0"
     }
 }

@@ -11,7 +11,8 @@ const MAX_VALIDATOR: any = {
 
 @Directive({
     selector: '[max][formControlName],[max][formControl],[max][ngModel]',
-    providers: [MAX_VALIDATOR]
+    providers: [MAX_VALIDATOR],
+    standalone: false
 })
 export class MaxValidatorDirective implements Validator, OnInit, OnChanges {
 

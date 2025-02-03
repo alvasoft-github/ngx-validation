@@ -11,7 +11,8 @@ const RANGE_VALIDATOR: any = {
 
 @Directive({
     selector: '[range][formControlName],[range][formControl],[range][ngModel]',
-    providers: [RANGE_VALIDATOR]
+    providers: [RANGE_VALIDATOR],
+    standalone: false
 })
 export class RangeValidatorDirective implements Validator, OnInit, OnChanges {
 

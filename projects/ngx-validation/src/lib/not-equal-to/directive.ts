@@ -13,7 +13,8 @@ const NOT_EQUAL_TO_VALIDATOR: any = {
 
 @Directive({
     selector: '[notEqualTo][formControlName],[notEqualTo][formControl],[notEqualTo][ngModel]',
-    providers: [NOT_EQUAL_TO_VALIDATOR]
+    providers: [NOT_EQUAL_TO_VALIDATOR],
+    standalone: false
 })
 export class NotEqualToValidatorDirective implements Validator, OnInit {
 

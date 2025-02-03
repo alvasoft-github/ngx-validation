@@ -11,7 +11,8 @@ const EMAIL_VALIDATOR: any = {
 
 @Directive({
     selector: '[ngvemail][formControlName],[ngvemail][formControl],[ngvemail][ngModel]',
-    providers: [EMAIL_VALIDATOR]
+    providers: [EMAIL_VALIDATOR],
+    standalone: false
 })
 export class EmailValidatorDirective implements Validator {
 
