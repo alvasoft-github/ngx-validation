@@ -1,4 +1,4 @@
-import { AbstractControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { AbstractControl, UntypedFormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export const DEPENDENT_ON_TRANSLATED_PARAMS_KEY = '__DEPENDENT_ON_TRANSLATED_PARAMS';
 
@@ -15,18 +15,18 @@ export interface IDependentOnValidationOptions {
 
     errorKey?: string;
 
-    errorKeyParamsFn?: (formGroup: FormGroup) => object;
+    errorKeyParamsFn?: (formGroup: UntypedFormGroup) => object;
 
-    translatedErrorKeyParamsFn?: (FormGroup: FormGroup) => { [id: string]: ITranslatedErrorParams };
+    translatedErrorKeyParamsFn?: (FormGroup: UntypedFormGroup) => { [id: string]: ITranslatedErrorParams };
 
-    predicateFn: (formGroup: FormGroup) => boolean;
+    predicateFn: (formGroup: UntypedFormGroup) => boolean;
 }
 
 const errorKey = 'dependentOn';
 
 export const dependentOn = (value: IDependentOnValidationOptions[]): ValidatorFn => {
     return (control: AbstractControl): ValidationErrors => {
-        if (!(control instanceof FormGroup)) {
+        if (!(control instanceof UntypedFormGroup)) {
             return null;
         }
 

@@ -1,6 +1,6 @@
 import { Directive, forwardRef, Input, OnInit } from '@angular/core';
 import {
-    AbstractControl, FormControl, NG_VALIDATORS, Validator, ValidatorFn
+    AbstractControl, UntypedFormControl, NG_VALIDATORS, Validator, ValidatorFn
 } from '@angular/forms';
 
 import { notEqualTo } from './validator';
@@ -18,7 +18,7 @@ const NOT_EQUAL_TO_VALIDATOR: any = {
 export class NotEqualToValidatorDirective implements Validator, OnInit {
 
     @Input()
-    public notEqualTo: FormControl;
+    public notEqualTo: UntypedFormControl;
 
     private validator: ValidatorFn;
 
